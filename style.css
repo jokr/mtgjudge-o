@@ -144,17 +144,28 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+    margin-bottom: 5px;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 2em;
     margin: 15px 0;
 }
 
-p {
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#content p, #content ul, #content ol {
 	margin-bottom: 1.5em;
     font-family: 'Droid Serif', Georgia, serif;
 }
+
 b, strong {
 	font-weight: bold;
 }
@@ -358,16 +369,14 @@ textarea {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-a:visited {
-	color: purple;
+a, a:visited {
+	color: #0066cc;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #ff8c00;
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -376,41 +385,64 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+    background-color: black;
+    padding: 0 20px;
+    width: 100%;
+    float: left;
 }
-.main-navigation ul {
+
+.main-navigation ul, .secondary-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-.main-navigation li {
+
+.secondary-navigation ul {
+    float: right;
+}
+
+.main-navigation li, .secondary-navigation li {
 	float: left;
 	position: relative;
 }
-.main-navigation a {
+
+.main-navigation a, .secondary-navigation a {
 	display: block;
 	text-decoration: none;
+    line-height: 2.5em;
+    padding: 0 10px;
 }
-.main-navigation ul ul {
+
+.main-navigation a {
+    color: white;
+}
+
+.main-navigation ul ul, .secondary-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
 	position: absolute;
-	top: 1.5em;
+	top: 2.5em;
 	z-index: 99999;
 }
+
 .main-navigation ul ul ul {
 	left: 100%;
 	top: 0;
 }
+
 .main-navigation ul ul a {
 	width: 200px;
+    background: black;
+    line-height: 1em;
+    padding: 10px;
+    height: auto;
 }
 .main-navigation ul ul li {
 }
 .main-navigation li:hover > a {
+    color: #ff8c00;
 }
 .main-navigation ul ul :hover > a {
 }
@@ -421,7 +453,9 @@ a:active {
 }
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
+    font-weight: bold;
 }
+
 /* Small menu */
 .menu-toggle {
 	cursor: pointer;
@@ -668,6 +702,15 @@ object {
 
 #page {
     background-color: white;
+    margin-top: 20px;
+}
+
+#content {
+    padding: 20px;
+}
+
+.nav-tabs {
+    margin: 0 0 15px 0;
 }
 
 /*--------------------------------------------------------------
@@ -678,10 +721,23 @@ object {
     color: #404040;
     text-decoration: none;
     font-weight: bold;
+    margin: 0;
 }
 
 .site-description {
     clear: none;
     margin: auto 0;
     font-style: italic;
+}
+
+.site-header img {
+    border-top: 5px solid black;
+}
+
+/*--------------------------------------------------------------
+15.0 Language Switcher
+--------------------------------------------------------------*/
+
+.menu-item.xl-list a {
+    text-transform: lowercase;
 }
