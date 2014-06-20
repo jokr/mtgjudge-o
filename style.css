@@ -44,6 +44,10 @@ and Blueprint http://www.blueprintcss.org/
 12.0 - Media
 13.0 - Layout
 14.0 - Header
+15.0 - Language Switcher
+16.0 - Footer
+17.0 - Components
+    17.1 - Tabs
 --------------------------------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
@@ -83,9 +87,6 @@ html {
 	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
 	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
 	box-sizing:         border-box;
-}
-body {
-	background: #fff;
 }
 article,
 aside,
@@ -383,12 +384,9 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
 	display: block;
     background-color: black;
     padding: 0 20px;
-    width: 100%;
-    float: left;
 }
 
 .main-navigation ul, .secondary-navigation ul {
@@ -434,25 +432,28 @@ a:active {
 
 .main-navigation ul ul a {
 	width: 200px;
-    background: black;
     line-height: 1em;
     padding: 10px;
     height: auto;
 }
-.main-navigation ul ul li {
+
+.main-navigation li {
+    background: black;
 }
+
+.main-navigation li:hover {
+    background-color: #222;
+}
+
 .main-navigation li:hover > a {
     color: #ff8c00;
 }
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
-}
+
 .main-navigation ul li:hover > ul {
 	display: block;
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a {
     font-weight: bold;
 }
 
@@ -700,22 +701,23 @@ object {
 13.0 Layout
 --------------------------------------------------------------*/
 
-#page {
+.container {
     background-color: white;
-    margin-top: 20px;
 }
 
 #content {
-    padding: 20px;
-}
-
-.nav-tabs {
-    margin: 0 0 15px 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
 }
 
 /*--------------------------------------------------------------
 14.0 Header
 --------------------------------------------------------------*/
+
+.site-header {
+    margin-top: 20px;
+}
 
 .site-title a {
     color: #404040;
@@ -740,4 +742,67 @@ object {
 
 .menu-item.xl-list a {
     text-transform: lowercase;
+}
+
+.xl-list {
+    padding-left: 10px;
+}
+
+.xl-list.lang-en {
+    background: transparent url('images/flags/en_us.png') no-repeat 1px;
+}
+
+.xl-list.lang-de {
+    background: transparent url('images/flags/de_de.png') no-repeat 1px;
+}
+
+.xl-list.lang-fr {
+    background: transparent url('images/flags/fr_fr.png') no-repeat 1px;
+}
+
+.xl-list.lang-es {
+    background: transparent url('images/flags/es_es.png') no-repeat 1px;;
+}
+
+/*--------------------------------------------------------------
+16.0 Footer
+--------------------------------------------------------------*/
+
+#colophon {
+    padding: 20px 50px;
+    background-color: black;
+    color: white;
+}
+
+.site-info {
+    font-size: .9em;
+}
+
+/*--------------------------------------------------------------
+17.0 Components
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+17.1 Tabs
+--------------------------------------------------------------*/
+
+#content .nav {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #ff8c00;
+}
+
+.nav.nav-stacked.nav-columns {
+    display: inline-block;
+    margin: 0;
+    max-width: 10%;
+    float: left;
+}
+
+.tab-content.nav-columns {
+    display: inline-block;
+    max-width: 90%;
+    float: right;
 }
