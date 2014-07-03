@@ -8,11 +8,11 @@ wp_enqueue_script( 'content-table', get_template_directory_uri() . '/js/content-
 get_header(); ?>
 
 	<div id="primary" class="content-area row">
-		<main id="main" class="site-main col-md-11 col-md-offset-1" role="main">
+		<main id="main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-9">
 						<?php get_template_part( 'content', 'page' ); ?>
 					</div>
 					<nav role="navigation" id="table-of-contents" class="col-md-3">

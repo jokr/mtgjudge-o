@@ -64,7 +64,7 @@ if ( ! function_exists( 'mtgjudge_o_setup' ) ) :
 		) );
 
 		// Enqueue Bootstrap
-		wp_enqueue_script( 'bootstap', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array('jquery') );
+		wp_enqueue_script( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array( 'jquery' ) );
 	}
 endif; // mtgjudge_o_setup
 add_action( 'after_setup_theme', 'mtgjudge_o_setup' );
