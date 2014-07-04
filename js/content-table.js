@@ -19,20 +19,7 @@
 
     html += '</ul>';
 
-    $table.find('.fixed-wrap').append(html);
+    $table.find('nav').append(html);
 
     $('body').scrollspy({target: '#table-of-contents'});
-
-    /*$window.scroll(function() {
-        if ($window.scrollTop() > offset.top) {
-            $table.stop().animate({
-                marginTop: $window.scrollTop() - offset.top + 15
-            });
-        } else {
-            $table.stop().animate({
-                marginTop: 0
-            });
-        }
-    });*/
-
 })(jQuery);

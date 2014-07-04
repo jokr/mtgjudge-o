@@ -1,9 +1,11 @@
 <?php
 /**
- * The Sidebar containing the main widget areas.
+ * The Sidebar containing the main widget areas, includes an automated index.
  *
  * @package o
  */
+wp_enqueue_script( 'content-table', get_template_directory_uri() . '/js/content-table.js', array( 'jquery' ), '201406', true );
+
 ?>
 	<div id="secondary" class="widget-area col-lg-3" role="complementary">
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
@@ -29,4 +31,9 @@
 			</aside>
 
 		<?php endif; // end sidebar widget area ?>
+		<aside id="table-of-contents">
+			<nav role="navigation">
+				<h1><?php _e( 'Contents', 'mtgjudge-o' ); ?></h1>
+			</nav>
+		</aside>
 	</div><!-- #secondary -->

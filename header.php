@@ -19,15 +19,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header container" role="banner">
-		<div class="row secondary-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-		</div>
+<div id="page" class="hfeed site container">
+	<header id="masthead" class="site-header row" role="banner">
 		<div class="site-branding row">
 			<h1 class="site-title col-md-8">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
 			<h2 class="site-description col-md-4"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
@@ -46,7 +42,10 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>
 		<!-- #site-navigation -->
+		<div class="secondary-navigation row">
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+		</div>
 	</header>
 	<!-- #masthead -->
 
-	<div id="content" class="site-content container">
+	<div id="content" class="site-content row">

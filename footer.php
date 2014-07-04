@@ -9,6 +9,7 @@
 ?>
 
 </div><!-- #content -->
+</div><!-- #page -->
 
 <footer id="colophon" class="site-footer container" role="contentinfo">
 	<div class="site-info row">
@@ -18,7 +19,6 @@
 	</div>
 	<!-- .site-info -->
 </footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
