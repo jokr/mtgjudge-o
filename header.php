@@ -18,7 +18,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-spy="scroll" data-target="#table-of-contents">
 <div id="page" class="hfeed site container">
 	<header id="masthead" class="site-header row" role="banner">
 		<div class="site-branding row">

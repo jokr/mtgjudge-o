@@ -43,7 +43,8 @@ if ( ! function_exists( 'mtgjudge_o_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'mtgjudge-o' ),
-			'secondary' => __( 'Secondary Menu', 'mtgjudge-o' )
+			'secondary' => __( 'Secondary Menu', 'mtgjudge-o' ),
+			'footer' => __( 'Footer Menu', 'mtgjudge-o' )
 		) );
 
 		// Enable support for Post Formats.
@@ -62,6 +63,10 @@ if ( ! function_exists( 'mtgjudge_o_setup' ) ) :
 			'comment-form',
 			'gallery',
 		) );
+
+		global $allowedposttags, $allowedtags;
+		$allowedposttags['a']['data-toggle'] = true;
+		$allowedtags['a']['data-toggle'] = true;
 
 		// Enqueue Bootstrap
 		wp_enqueue_script( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array( 'jquery' ) );

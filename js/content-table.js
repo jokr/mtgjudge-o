@@ -21,5 +21,5 @@
 
     $table.find('nav').append(html);
 
-    $('body').scrollspy({target: '#table-of-contents'});
+    $('body').scrollspy('refresh');
 })(jQuery);

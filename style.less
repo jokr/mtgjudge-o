@@ -775,6 +775,10 @@ body, html {
   height: 100%;
 }
 
+body {
+  position: relative;
+}
+
 #page {
   min-height: 80%;
   margin-top: 30px;
@@ -897,15 +901,19 @@ p {
 .nav.nav-stacked.nav-columns {
   display: inline-block;
   margin: 0;
-  max-width: 10%;
+  max-width: 15%;
   float: left;
 
 }
 
 .tab-content.nav-columns {
   display: inline-block;
-  max-width: 85%;
-  float: right;
+  width: 80%;
+  margin-left: 30px
+}
+
+.tab-content h2 {
+  margin-top: 0;
 }
 
 /*--------------------------------------------------------------
