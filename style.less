@@ -37,6 +37,7 @@ Tags:
 16.0 - Footer
 17.0 - Components
     17.1 - Tabs
+    17.2 - Media Boxes
 --------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 @import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
@@ -472,7 +473,7 @@ a:active {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: 250px;
   line-height: 1em;
   padding: 10px;
   height: auto;
@@ -836,28 +837,29 @@ p {
   min-height: 30px;
 }
 
-.menu-item.xl-list a {
-  text-transform: lowercase;
-}
-
 .xl-list {
-  padding-left: 10px;
+  padding-left: 20px;
+  background-size: 24px !important;
 }
 
 .xl-list.lang-en {
-  background: transparent url('images/flags/en_us.png') no-repeat 1px;
+  background: transparent url('images/flags/US.png') no-repeat 1px;
 }
 
 .xl-list.lang-de {
-  background: transparent url('images/flags/de_de.png') no-repeat 1px;
+  background: transparent url('images/flags/DE.png') no-repeat 1px;
 }
 
 .xl-list.lang-fr {
-  background: transparent url('images/flags/fr_fr.png') no-repeat 1px;
+  background: transparent url('images/flags/FR.png') no-repeat 1px;
 }
 
 .xl-list.lang-es {
-  background: transparent url('images/flags/es_es.png') no-repeat 1px;;
+  background: transparent url('images/flags/ES.png') no-repeat 1px;;
+}
+
+.xl-list.lang-it {
+  background: transparent url('images/flags/IT.png') no-repeat 1px;;
 }
 
 /*--------------------------------------------------------------
@@ -880,6 +882,11 @@ p {
 
 .site-info a:hover {
   color: #ff8c00;
+}
+
+.site-info ul.menu {
+  list-style: none;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -909,7 +916,7 @@ p {
 .tab-content.nav-columns {
   display: inline-block;
   width: 80%;
-  margin-left: 30px
+  padding-left: 30px
 }
 
 .tab-content h2 {
@@ -921,7 +928,6 @@ p {
 --------------------------------------------------------------*/
 
 #table-of-contents > nav {
-  position: fixed;
   width: 293px;
 }
 
@@ -934,7 +940,7 @@ p {
   width: 100%;
   margin: 0;
   position: relative;
-  left: -15px;
+  left: -16px;
 }
 
 #table-of-contents li.active > a {
@@ -951,4 +957,10 @@ p {
   padding: 8px 15px;
   background: #eee;
   width: 225px;
+}
+
+.media-body {
+  vertical-align: middle;
+  display: table-cell;
+  height: 48px;
 }

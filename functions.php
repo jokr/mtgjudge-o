@@ -12,14 +12,13 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'mtgjudge_o_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
+if ( ! function_exists( 'mtgjudge_o_setup' ) ) : /**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */ {
 	function mtgjudge_o_setup() {
 
 		/*
@@ -42,9 +41,9 @@ if ( ! function_exists( 'mtgjudge_o_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'mtgjudge-o' ),
+			'primary'   => __( 'Primary Menu', 'mtgjudge-o' ),
 			'secondary' => __( 'Secondary Menu', 'mtgjudge-o' ),
-			'footer' => __( 'Footer Menu', 'mtgjudge-o' )
+			'footer'    => __( 'Footer Menu', 'mtgjudge-o' )
 		) );
 
 		// Enable support for Post Formats.
@@ -66,11 +65,15 @@ if ( ! function_exists( 'mtgjudge_o_setup' ) ) :
 
 		global $allowedposttags, $allowedtags;
 		$allowedposttags['a']['data-toggle'] = true;
-		$allowedtags['a']['data-toggle'] = true;
+		$allowedtags['a']['data-toggle']     = true;
 
 		// Enqueue Bootstrap
-		wp_enqueue_script( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js',
+			array( 'jquery' ) );
+		wp_enqueue_script( 'xili-menu-fix', get_template_directory_uri() . '/js/xili-menu-fix.js',
+			array( 'jquery' ), '1.0', true );
 	}
+}
 endif; // mtgjudge_o_setup
 add_action( 'after_setup_theme', 'mtgjudge_o_setup' );
 
@@ -79,12 +82,12 @@ add_action( 'after_setup_theme', 'mtgjudge_o_setup' );
  */
 function mtgjudge_o_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'mtgjudge-o' ),
-		'id' => 'sidebar-1',
+		'name'          => __( 'Sidebar', 'mtgjudge-o' ),
+		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
 	) );
 }
 
