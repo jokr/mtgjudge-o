@@ -789,9 +789,6 @@ p {
   margin: auto 0;
   font-style: italic;
 }
-.site-header img {
-  border-top: 5px solid black;
-}
 /*--------------------------------------------------------------
 15.0 Language Switcher
 --------------------------------------------------------------*/
@@ -816,6 +813,24 @@ p {
 }
 .xl-list.lang-it {
   background: transparent url('images/flags/IT.png') no-repeat 1px;
+}
+.xl-list.lang-pl {
+  background: transparent url('images/flags/PL.png') no-repeat 1px;
+}
+.xl-list.lang-zh_cn {
+  background: transparent url('images/flags/ZH_CN.png') no-repeat 1px;
+}
+.xl-list.lang-zh_hk {
+  background: transparent url('images/flags/ZH_HK.png') no-repeat 1px;
+}
+.xl-list.lang-ja {
+  background: transparent url('images/flags/JP.png') no-repeat 1px;
+}
+.xl-list.lang-pt {
+  background: transparent url('images/flags/BR.png') no-repeat 1px;
+}
+.xl-list.lang-ru {
+  background: transparent url('images/flags/RU.png') no-repeat 1px;
 }
 /*--------------------------------------------------------------
 16.0 Footer
